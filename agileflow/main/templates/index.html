@@ -1,0 +1,1214 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <!-- Bootstrap CSS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+        <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css"/>
+        <!--<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">!-->
+
+        
+        <script>
+            $(document).ready(function(){
+                $('.navshow').hide();
+                $(".hidemand").hide();
+                $(".inqshow").hide();
+                $(".sqshow").hide();
+                $(".soshow").hide();
+                $(".poshow").hide();
+                $(".arinvshow").hide();
+                $(".subshhd").hide();
+                $(".showonpo").hide();
+                $(".grposhow").hide();
+                $(".apshow").hide();
+                $(".prequestshow").hide();
+            });
+        </script>
+        <!--<script>
+            $(".datepicker").datepicker({ uiLibrary:'bootstrap4' }); 
+        </script>-->
+    </head>
+    <body style="margin-bottom: 10%; background-color:#e9eef2;">
+        <style>
+            /*custom font for text*/
+            @import url(http://fonts.googleapis.com/css?family=Nunito);
+            /*Basic reset*/
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                /*background: #4EB889;*/
+                font-family: Nunito, arial, verdana;
+            }
+            #vertical-menu {
+                /*background: #004050;*/
+                width: 270px;
+                margin: 100px auto 0 auto;
+                color: #FFA500;
+                box-shadow: 
+                    0 5px 15px 1px rgba(0, 0, 0, 0.6), 
+                    0 0 200px 1px rgba(255, 255, 255, 0.5);
+            }
+            /*heading styles*/
+            #vertical-menu h3 {
+                font-size: 35px;
+                line-height: 70px;
+                padding: 0 10px;
+                cursor: pointer;
+                /*fallback for browsers not supporting gradients*/
+                /*background: #003040;
+                background: linear-gradient(#003040, #002535);*/
+            }
+            /*heading hover effect*/
+            #vertical-menu h3:hover {
+                text-shadow: 0 0 1px rgba(255, 255, 255, 0.7);
+            }
+            /*iconfont styles*/
+            #vertical-menu h3 span {
+                font-size: 36px;
+                margin-right: 10px;
+            }
+            /*list items*/
+            #vertical-menu li {
+                list-style-type: none;
+            }
+            /*links*/
+            #vertical-menu ul ul li a {
+                color: #FFA500;
+                text-decoration: none;
+                font-size: 25px;
+                line-height: 60px;
+                display: block;
+                padding: 0 15px;
+                /*transition for smooth hover animation*/
+                transition: all 0.15s;
+            }
+            /*hover effect on links*/
+            #vertical-menu ul ul li a:hover {
+                background: #FFA500;
+                color:white;
+                /*border-left: 5px solid lightgreen;*/
+            }
+            /*Lets hide the non active LIs by default*/
+            #vertical-menu ul ul {
+                display: none;
+            }
+            #vertical-menu li.active ul {
+                display: block;
+            }
+            .my-primary{
+                background: #28a745;
+                color: white;
+            }
+            .form-control{
+                border-color: #28a745;
+            }
+            .form-control:focus {
+                border-color: #28a745;
+                box-shadow: 0 0 0 0 #28a745;
+            }
+            
+            /*.fsize-big{
+                font-size:21px;
+            }
+            .fsize-medium{
+                font-size: 16px;
+            }
+            .fsize-small{
+                font-size:15px;
+            }*/
+            .text-black-50 {
+                color: rgba(0,0,0,.5)!important;
+            }
+            .text-uppercase {
+                text-transform: uppercase!important;
+            }
+            .mb-1, .my-1 {
+                margin-bottom: .375rem!important;
+            }
+            h6{
+                font-size: .90rem;
+                margin-bottom: .75rem;
+                font-family: inherit;
+                font-weight: 500;
+                line-height: 1.2;
+                color: rgba(0,0,0,.5);
+            }
+            .form-group label {
+                color: #6c757d;
+                font-size: .875rem;
+                margin-bottom: .25rem;
+                font-weight: 700;
+                opacity: .9;
+            }
+            .card {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                min-width: 0;
+                word-wrap: break-word;
+                background-color: #fff;
+                background-clip: border-box;
+                border: 1px solid #e9eef2;
+                border-radius: .5rem;
+            }
+        </style>
+        <div id="vertical-menu" class="hidedd">
+            <ul>
+                <li>
+                        <h3><span class="plus">+</span>New</h3>
+
+                    <ul>
+                        <li><button type="button" class="btn btn-light btn-lg inq text-left" style="width:100%"><span class=".fsize-big">Inquiry</span></button>
+                        </li>
+                        <li><button type="button" class="btn btn-light btn-lg salesq text-left" style="width:100%"><span class=".fsize-big">Sales Quotes</span></button>
+                        </li>
+                        <li><button type="button" class="btn btn-light btn-lg saleso text-left" style="width:100%"><span class=".fsize-big">Sales Orders</span></button>
+                        </li>
+                        <li><button type="button" class="btn btn-light btn-lg suppo text-left" style="width:100%"><span class=".fsize-big">Supplier PO</span></button>
+                        </li>
+                        <li><button type="button" class="btn btn-light btn-lg supppreq text-left" style="width:100%"><span class=".fsize-big">Supplier Payment Request</span></button>
+                        </li>
+                        <li><button type="button" class="btn btn-light btn-lg arinv text-left" style="width:100%"><span class=".fsize-big">AR Invoice Request</span></button>
+                        </li>
+                        <li><button type="button" class="btn btn-light btn-lg grpo text-left" style="width:100%"><span class=".fsize-big">GRPO Request</span></button>
+                        </li>
+                        <li><button type="button" class="btn btn-light btn-lg ap text-left" style="width:100%"><span class=".fsize-big">AP Invoice Request</span></button>
+                        </li>
+                    </ul>
+                </li>
+                <!-- we will keep this LI open by default -->
+            </ul>
+        </div>
+        <div class="container">
+        <nav aria-label="breadcrumb" class="navshow">
+                <ol class="breadcrumb appnlist" style="background-color: white">
+                    <li class="breadcrumb-item"><a href="#" style="color:orange;">Home</a></li>
+                </ol>
+            </nav>
+            <div>
+                <form>
+                        <div class="card hidemand">
+                                <div class="card-body">
+                                    <h2 class="card-title fsize-big" style="color:orange;">Mandatory Fields</h2>
+                                    <div class="row">
+                                        <div class="col form-group">
+                                            <label>Company Name*</label>
+                                            <input name="companyname" type="text" class="form-control form-control-sm" id="exampleInputPassword1" placeholder="Henkel" required>
+                                        </div>
+                                        <div class="col form-group">
+                                            <label for="inputState">Is SEZ*</label>
+                                                <select name="shipfrom" id="inputState" class="form-control form-control-sm" required>
+                                                    <option selected>Yes</option>
+                                                    <option>No</option>
+                                                </select>
+                                        </div>
+                                    </div><br>
+                                    <h6 class="text-uppercase text-black-50 mb-1" class="fsize-medium">Billing/Shipping Details</h6 class="text-uppercase text-black-50 mb-1">
+                                    <div class="row fsize-small">
+                                        <div class="col form-group">
+                                            <label for="inputState">Bill From*</label>
+                                            <select name="billfrom" id="inputState" class="form-control form-control-sm" required>
+                                                <option selected>Lower Parel, Mumbai</option>
+                                                <option>...</option>
+                                            </select>
+                                        </div>
+                                        <div class="col form-group">
+                                            <label for="inputState">Ship From*</label>
+                                            <select name="shipfrom" id="inputState" class="form-control form-control-sm" required>
+                                                <option selected>Lower Parel, Mumbai</option>
+                                                <option>...</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col form-group">
+                                                <label>Billing Company*</label>
+                                                <select id="inputState" class="form-control form-control-sm" required>
+                                                    <option selected>BMRO</option>
+                                                    <option>ONG</option>
+                                                </select>
+                                        </div>
+                                        <div class="col form-group">
+                                                <label>Shipping Company*</label>
+                                                <select id="inputState" class="form-control form-control-sm" required>
+                                                    <option selected>BMRO</option>
+                                                    <option>ONG</option>
+                                                </select>
+                                        </div>
+                                        <div class="col form-group">
+                                                <label>Billing Contact*</label>
+                                                <select id="inputState" class="form-control form-control-sm" required>
+                                                    <option selected>Lorem Ipsum</option>
+                                                    <option>...</option>
+                                                </select>
+                                        </div>
+                                        <div class="col form-group">
+                                            <label>Shipping Contact*</label>
+                                            <select id="inputState" class="form-control form-control-sm" required>
+                                                <option selected>Lorem Ipsum</option>
+                                                <option>...</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row fsize-small">
+                                            <div class="col form-group">
+                                                <label for="inputState">Billing Address*</label>
+                                                <select name="billto" id="inputState" class="form-control form-control-sm" required>
+                                                    <option selected>SR INTEGRATED CIRCUIT INDIA PVT LTD, NO.9,3RD MAIN,KENDRA UPADYAYARA</option>
+                                                    <option>...</option>
+                                                </select>
+                                            </div>
+                                            <div class="col form-group">
+                                                <label for="inputState">Shipping Address*</label>
+                                                <select name="shipto" id="inputState" class="form-control form-control-sm" required>
+                                                    <option selected>SR INTEGRATED CIRCUIT INDIA PVT LTD, NO.9,3RD MAIN,KENDRA UPADYAYARA</option>
+                                                    <option>...</option>
+                                                </select>
+                                            </div>
+                                    </div>
+                                    
+                                   
+                                    <br>
+                                   <h6 class="text-uppercase text-black-50 mb-1" class="fsize-medium">Terms and Condition</h6 class="text-uppercase text-black-50 mb-1">
+                                   <div class="row fsize-small">
+                                    <div class="col form-group">
+                                        <label for="inputState">Payment Terms*</label>
+                                        <select name="billto" id="inputState" class="form-control form-control-sm" required>
+                                            <option selected>25 Days after delivery</option>
+                                            <option>...</option>
+                                        </select>
+                                    </div>
+                                </div><br>
+                                
+                                    <h6 class="text-uppercase text-black-50 mb-1" class="fsize-medium">Product Details</h6 class="text-uppercase text-black-50 mb-1">
+                                    <div class="showininq">
+                                            <div class="appendhere"></div>
+                                            
+                                        <div class="form-row">
+                                                <div class="col-md-3">
+                                                <a href="#" class="btn btn-success btn-outline-success btn-block mb-2 mb-md-0"><i class="fal fa-file-excel mr-1"></i>Add
+                                                products using excel</a>
+                                                </div>
+                                                <div class="col-md-3">
+                                                <a href="#" class="btn btn-outline-success btn-block mb-2 mb-md-0"><i class="fal fa-clipboard-list mr-1"></i>Add
+                                                products through list</a>
+                                                </div>
+                                                <div class="col-md-3">
+                                                <a class="btn btn-outline-success btn-block mb-2 mb-md-0 add_nested_fields_link addproinq" data-association-path="inquiry_inquiry_products" data-object-class="inquiry_product" href="javascript:void(0)">
+                                                <i class="fal fa-plus-circle mr-1"></i>Add a product
+                                                </a> </div>
+                                                <div class="col-md-3">
+                                                <a href="#" class="btn btn-outline-success btn-block mb-2 mb-md-0"><i class="fal fa-clipboard-list mr-1"></i>Create
+                                                Kit</a>
+                                                </div>
+                                        </div>
+                                    </div>
+                                    <div class="showothers">
+                                        <div class="appendforothers">
+                                        </div><br>    
+                                        <div class="form-row">
+                                                <div class="col-md-3">
+                                                <a href="#" class="btn btn-success btn-outline-success btn-block mb-2 mb-md-0"><i class="fal fa-file-excel mr-1"></i>Add
+                                                products using excel</a>
+                                                </div>
+                                                <div class="col-md-3">
+                                                <a href="#" class="btn btn-outline-success btn-block mb-2 mb-md-0"><i class="fal fa-clipboard-list mr-1"></i>Add
+                                                products through list</a>
+                                                </div>
+                                                <div class="col-md-3">
+                                                <a href="javascript:void(0)" class="btn btn-outline-success btn-block mb-2 mb-md-0 add_nested_fields_link addproothers" data-association-path="inquiry_inquiry_products addallpro" data-object-class="inquiry_product">
+                                                <i class="fal fa-plus-circle mr-1"></i>Add a product
+                                                </a> </div>
+                                                <div class="col-md-3">
+                                                <a href="#" class="btn btn-outline-success btn-block mb-2 mb-md-0"><i class="fal fa-clipboard-list mr-1"></i>Create
+                                                Kit</a>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                           
+                    <div class="card inqshow">
+                        <div class="card-body">
+                            <h2 class="card-title fsize-big" style="color:orange;">Inquiry Fields</h2>
+                            <h6 class="text-uppercase text-black-50 mb-1" class="fsize-medium">Inquiry Details</h6 class="text-uppercase text-black-50 mb-1">
+                            <div class="row">
+                                <div class="col form-group">
+                                    <label>Calculation Sheet*</label>
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="customFile">
+                                        <label class="custom-file-label form-control form-control-sm-sm" for="customFile">Choose file</label>
+                                    </div>
+                                </div>
+                                <div class="col form-group">
+                                    <label>Subject*</label>
+                                    <input type="text" class="form-control form-control-sm form-control form-control-sm-sm" id="exampleInputPassword1" placeholder="Lab test inquiry" required>
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col form-group">
+                                    <label>Product Type*</label>
+                                    <select id="inputState" class="form-control form-control-sm form-control form-control-sm-sm" required>
+                                        <option selected>MRO</option>
+                                        <option>...</option>
+                                    </select>
+                                </div>
+                                <div class="col form-group">
+                                    <label>Potential Amount*</label>
+                                    <input type="text" class="form-control form-control-sm form-control form-control-sm-sm" id="exampleInputPassword1" placeholder="0.1" required>
+                                </div>
+                                <div class="col form-group">
+                                    <label>Gross Profit*</label>
+                                    <input type="text" class="form-control form-control-sm form-control form-control-sm-sm" id="exampleInputPassword1" placeholder="0.0" required>
+                                </div>       
+                            </div>
+                            <div class="row">
+                                <div class="col form-group">
+                                    <label>Opportunity Type*</label>
+                                    <select id="inputState" class="form-control form-control-sm form-control form-control-sm-sm" required>
+                                        <option selected>Regular</option>
+                                        <option>...</option>
+                                    </select>
+                                </div>
+                                <div class="col form-group">
+                                    <label>Quote Category*</label>
+                                    <select id="inputState" class="form-control form-control-sm form-control form-control-sm-sm" required>
+                                        <option selected>BMRO</option>
+                                        <option>ONG</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            
+                           <h6 class="text-uppercase text-black-50 mb-1" class="fsize-medium">Owner Details</h6 class="text-uppercase text-black-50 mb-1">
+                           <div class="row fsize-small">
+                                <div class="col form-group">
+                                    <label for="inputState">Procurement Specialist*</label>
+                                    <select name="billto" id="inputState" class="form-control form-control-sm form-control form-control-sm-sm" required>
+                                        <option selected>ABC</option>
+                                        <option>...</option>
+                                    </select>
+                                </div>
+                                <div class="col form-group">
+                                    <label for="inputState">Outside Sales Owner*</label>
+                                    <select name="shipto" id="inputState" class="form-control form-control-sm form-control form-control-sm-sm" required>
+                                        <option selected>QKWEOO</option>
+                                        <option>...</option>
+                                    </select>
+                                </div>
+                                <div class="col form-group">
+                                    <label for="inputState">Account Owner*</label>
+                                    <select name="shipto" id="inputState" class="form-control form-control-sm form-control form-control-sm-sm" required>
+                                        <option selected>BDSUB</option>
+                                        <option>...</option>
+                                    </select>
+                                </div>
+                                <div class="col form-group">
+                                    <label for="inputState">Procurement Operations*</label>
+                                    <select name="shipto" id="inputState" class="form-control form-control-sm form-control form-control-sm-sm" required>
+                                        <option selected>ASDINW</option>
+                                        <option>...</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col form-group fsize-small">
+                                    <label>Expected Closing Date*</label>
+                                    <input class="form-control form-control-sm datepicker">
+                                    <!--small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+                                </div>
+                                <div class="col form-group fsize-small">
+                                    <label>Quotation Followup Date*</label>
+                                    <input class="form-control form-control-sm datepicker">
+                                    <!--small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                            <div class="col-md-6">
+                                <a href="#" class="btn-block btn btn-dark"><i class="fal fa-envelope mr-1"></i>Send
+                                Acknowledgement</a>
+                            </div>
+                            <div class="mt-1 mt-md-0 col-md-6">
+                            <button name="button" type="submit" class="btn btn-warning btn-block"><i class="fal fa-pen mr-1"></i><span>Create Inquiry </span></button>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card sqshow">
+                            <div class="card-body">
+                                <h2 class="card-title fsize-big" style="color:orange;">Sales Quotes</h2>
+                                <h6 class="text-uppercase text-black-50 mb-1" class="fsize-medium">Sales Quote Details</h6 class="text-uppercase text-black-50 mb-1">
+                                <div class="row">
+                                    <div class="col form-group fsize-small">
+                                        <label>Customer Order Date*</label>
+                                        <input class="form-control form-control-sm datepicker">
+                                        
+                                    </div>
+                                    <div class="col form-group">
+                                        <label>Customer Committed Date*</label>
+                                        <input class="form-control form-control-sm datepicker">
+                                    </div>
+                                </div>
+                                <div class="row fsize-small">
+                                    <div class="col form-group">
+                                        <label>Currency*</label>
+                                        <select id="inputState" class="form-control form-control-sm" required>
+                                            <option selected>INR</option>
+                                            <option>...</option>
+                                        </select>
+                                        <!--small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+                                    </div>
+                                    <div class="col form-group">
+                                        <label>Conversion Rate*</label>
+                                        <select id="inputState" class="form-control form-control-sm" required>
+                                            <option selected>1</option>
+                                            <option>...</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-row"><div class="col-6"><button name="save" type="submit" class="btn btn-warning btn-block"><i class="fal fa-pen mr-1"></i> Edit
+                                </button></div> <div class="col-6"><button name="save_and_preview" type="submit" class="btn btn-success btn-block"><i class="far fa-check mr-1"></i> Save and Confirm
+                                </button></div></div>
+                            </div>
+                        </div>
+                    <div class="card soshow">
+                            <div class="card-body">
+                                <h2 class="card-title fsize-big" style="color:orange;">Sales Order</h2>
+                                <h6 class="text-uppercase text-black-50 mb-1" class="fsize-medium">Sales Order Details</h6 class="text-uppercase text-black-50 mb-1">
+                                <div class="row">
+                                    <div class="col form-group fsize-small">
+                                        <label>Customer Order Date*</label>
+                                        <input class="form-control form-control-sm datepicker">
+                                        <!--small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+                                    </div>
+                                    <div class="col form-group">
+                                        <label>Customer Committed Date*</label>
+                                        <input class="form-control form-control-sm datepicker">
+                                    </div>
+                                </div>
+                                <div class="row fsize-small">
+                                    <div class="col form-group">
+                                        <label>Currency*</label>
+                                        <select id="inputState" class="form-control form-control-sm" required>
+                                            <option selected>INR</option>
+                                            <option>...</option>
+                                        </select>
+                                        <!--small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+                                    </div>
+                                    <div class="col form-group">
+                                        <label>Conversion Rate*</label>
+                                        <select id="inputState" class="form-control form-control-sm" required>
+                                            <option selected>1</option>
+                                            <option>...</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <button name="button" type="submit" class="btn btn-success btn-block submit-form">
+                                    <i class="fal fa-pen"></i>
+                                    Save And Confirm
+                                </button> </div>
+                            </div>
+                        </div>
+                        <div class="card poshow">
+                                <div class="card-body">
+                                    <h2 class="card-title fsize-big" style="color:orange;">Purchase Order Request</h2>
+                                    <h6 class="text-uppercase text-black-50 mb-1" class="fsize-medium">Purchase Order Request Details</h6 class="text-uppercase text-black-50 mb-1">
+                                    <div class="row">
+                                        <div class="col form-group fsize-small">
+                                            <label>Customer Order Date*</label>
+                                            <input class="form-control form-control-sm datepicker">
+                                            <!--small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+                                        </div>
+                                        <div class="col form-group">
+                                            <label>Customer Committed Date*</label>
+                                            <input class="form-control form-control-sm datepicker">
+                                        </div>
+                                    </div>
+                                    <div class="row fsize-small">
+                                        <div class="col form-group">
+                                            <label>Supplier PO Type*</label>
+                                            <select id="inputState" class="form-control form-control-sm" required>
+                                                <option selected>Regular</option>
+                                                <option>Route Through</option>
+                                                <option>Drop Ship</option>
+                                            </select>
+                                            <!--small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+                                        </div>
+                                        <div class="col form-group">
+                                            <label>Contact</label>
+                                            <select id="inputState" class="form-control form-control-sm" required>
+                                                <option selected>Lorem Ipsum</option>
+                                                <option>...</option>
+                                            </select>
+                                        </div>
+                                        <div class="col form-group">
+                                            <label>Contact Email</label>
+                                            <select id="inputState" class="form-control form-control-sm" required>
+                                                <option selected>abc.qwda@mdsl.com</option>
+                                                <option>...</option>
+                                            </select>
+                                        </div>
+                                        <div class="col form-group">
+                                            <label>Contact Phone*</label>
+                                            <input name="companyname" type="text" class="form-control form-control-sm" id="exampleInputPassword1" placeholder="Henkel" required>
+                                        </div>
+                                    </div>
+                                    <div class="row fsize-small">
+                                        <div class="col form-group">
+                                            <label for="inputState">Bill From*</label>
+                                            <select name="billfrom" id="inputState" class="form-control form-control-sm" required>
+                                                <option selected>Lower Parel, Mumbai</option>
+                                                <option>...</option>
+                                            </select>
+                                        </div>
+                                        <div class="col form-group">
+                                            <label for="inputState">Ship From*</label>
+                                            <select name="shipfrom" id="inputState" class="form-control form-control-sm" required>
+                                                <option selected>Lower Parel, Mumbai</option>
+                                                <option>...</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row fsize-small">
+                                        <div class="col form-group">
+                                            <label for="inputState">Bill To*</label>
+                                            <select name="billto" id="inputState" class="form-control form-control-sm" required>
+                                                <option selected>SR INTEGRATED CIRCUIT INDIA PVT LTD, NO.9,3RD MAIN,KENDRA UPADYAYARA</option>
+                                                <option>...</option>
+                                            </select>
+                                        </div>
+                                        <div class="col form-group">
+                                            <label for="inputState">Ship To*</label>
+                                            <select name="shipto" id="inputState" class="form-control form-control-sm" required>
+                                                <option selected>SR INTEGRATED CIRCUIT INDIA PVT LTD, NO.9,3RD MAIN,KENDRA UPADYAYARA</option>
+                                                <option>...</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col form-group fsize-small">
+                                            <label>Delivery Type*</label>
+                                            <select id="inputState" class="form-control form-control-sm" required>
+                                                <option selected>EXW</option>
+                                                <option>FOB</option>
+                                                <option>...</option>
+                                            </select>
+                                        </div>
+                                        <div class="col form-group">
+                                            <label>Transport Mode*</label>
+                                            <select id="inputState" class="form-control form-control-sm" required>
+                                                <option selected>Road</option>
+                                                <option selected>Air</option>
+                                                <option>...</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row fsize-small">
+                                        <div class="col form-group">
+                                            <label>Attachments*</label>
+                                            <div class="custom-file">
+                                                <input type="file" class="custom-file-input" id="customFile">
+                                                <label class="custom-file-label form-control form-control-sm-sm" for="customFile">Choose file</label>
+                                            </div>
+                                        </div>
+                                        <div class="col form-group">
+                                            <label>PO Currency*</label>
+                                            <select id="inputState" class="form-control form-control-sm" required>
+                                                <option selected>INR</option>
+                                                <option>...</option>
+                                            </select>
+                                            <!--small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+                                        </div>
+                                        <div class="col form-group">
+                                            <label>Conversion Rate*</label>
+                                            <select id="inputState" class="form-control form-control-sm" required>
+                                                <option selected>1</option>
+                                                <option>...</option>
+                                            </select>
+                                        </div>
+                                        <div class="col form-group">
+                                            <label>Freight*</label>
+                                            <select id="inputState" class="form-control form-control-sm" required>
+                                                <option selected>Included</option>
+                                                <option>Excluded</option>
+                                            </select>
+                                        </div>
+                                    </div><br>
+                                    <div class="form-row">
+                                        <button name="button" type="submit" class="btn btn-success btn-block submit-form">
+                                        <i class="fal fa-pen"></i>
+                                        Create PO Request
+                                    </button></div>
+                                </div>
+                            </div>
+
+                            <div class="card grposhow">
+                            <div class="card-body">
+                                <h2 class="card-title fsize-big" style="color:orange;">GRPO</h2>
+                                <h6 class="text-uppercase text-black-50 mb-1" class="fsize-medium">GRPO Details</h6 class="text-uppercase text-black-50 mb-1">
+                                <div class="row">
+                                    <div class="col form-group fsize-small">
+                                        <label>Status*</label>
+                                            <select id="inputState" class="form-control form-control-sm" required>
+                                                <option>GRPO Pending</option>
+                                                <option>Inward Complete</option>
+                                                <option>AP invoice Request</option>
+                                                <option>....</option>
+                                            </select>
+                                    </select>
+                                    </div>
+                                    <div class="col form-group">
+                                        <label>SAP GRPO number*</label>
+                                        <input name="SAP GRPO Number" type="text" class="form-control form-control-sm" id="exampleInputPassword1" placeholder="#7624137" required>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                        <div class="col form-group">
+                                            <label>Attachments</label>
+                                            <div class="custom-file">
+                                                <input type="file" class="custom-file-input" id="customFile">
+                                                <label class="custom-file-label form-control form-control-sm-sm" for="customFile">Choose file</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <div class="form-row"><div class="col-6"><button name="save" type="submit" class="btn btn-warning btn-block"><i class="fal fa-pen mr-1"></i> Edit
+                                </button></div> <div class="col-6"><button name="save_and_preview" type="submit" class="btn btn-success btn-block"><i class="far fa-check mr-1"></i> Create GRPO Request
+                                </button></div></div>
+                            </div>
+                        </div>
+
+                        <div class="card apshow">
+                        <div class="card-body">
+                            <h2 class="card-title fsize-big" style="color:orange;">AP Invoice</h2>
+                            <h6 class="text-uppercase text-black-50 mb-1" class="fsize-medium">AP Invoice</h6 class="text-uppercase text-black-50 mb-1">
+                            <div class="row">
+                                <div class="col form-group fsize-small">
+                                    <label>Status*</label>
+                                        <select id="inputState" class="form-control form-control-sm" required>
+                                                <option>GRPO Pending</option>
+                                                <option>Inward Complete</option>
+                                                <option>AP invoice Request</option>
+                                                <option>....</option>
+                                        </select>
+                                </div>
+                                <div class="col form-group">
+                                    <label>SAP GRPO number*</label>
+                                    <input name="SAP GRPO Number" type="text" class="form-control form-control-sm" id="exampleInputPassword1" placeholder="#7631137" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col form-group">
+                                    <label>SAP AP Invoice Document Number*</label>
+                                    <input name="SAP AP Invoice Document Number" type="text" class="form-control form-control-sm" id="exampleInputPassword1" placeholder="#7631137" required>
+                                </div>
+                                <div class="col form-group">
+                                    <label>Attachments</label>
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="customFile">
+                                        <label class="custom-file-label form-control form-control-sm-sm" for="customFile">Choose file</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row"><div class="col-6"><button name="save" type="submit" class="btn btn-warning btn-block"><i class="fal fa-pen mr-1"></i> Edit
+                            </button></div> <div class="col-6"><button name="save_and_preview" type="submit" class="btn btn-success btn-block"><i class="far fa-check mr-1"></i> Create AP Invoice
+                            </button></div></div>
+                            </div>
+                        </div>
+
+
+                        <div class="card arinvshow">
+                        <div class="card-body">
+                            <h2 class="card-title fsize-big" style="color:orange;">AR INVOICE</h2>
+                            <h6 class="text-uppercase text-black-50 mb-1" class="fsize-medium">AR Details</h6 class="text-uppercase text-black-50 mb-1">
+                            <div class="row">
+                                <div class="col form-group">
+                                    <label>Status</label>
+                                    <select id="inputState" class="form-control form-control-sm selectforinp" required>
+                                        <option selected="selected" value="AR Invoice requested">AR Invoice requested</option>
+                                        <option value="Cancelled AR Invoice">Cancelled AR Invoice</option>
+                                        <option value="AR Invoice Request Rejected">AR Invoice Request Rejected</option>
+                                        <option value="Completed AR Invoice Request">Completed AR Invoice Request</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row arcancel">
+                                <div class="col form-group">
+                                    <label>AR Cancellation Reason</label>
+                                    <select id="inputState" class="form-control form-control-sm" required>
+                                        <option value="Freight Charges Not Included">Freight Charges Not Included</option>
+                                        <option value="Installation Charges Not Included">Installation Charges Not Included</option>
+                                        <option value="Others">Others</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row arreject">
+                                    <div class="col form-group">
+                                        <label>AR Rejection Reason</label>
+                                        <select id="inputState" class="form-control form-control-sm" required>
+                                            <option>Rejected: Product not in Stock</option>
+                                            <option>Rejected: Product Qty Fulfilled</option>
+                                            <option>Others</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            <div class="row">
+                                <div class="col form-group">
+                                    <label>AR Invoice Number</label>
+                                    <input type="text" class="form-control form-control-sm" id="exampleInputPassword1" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <button name="button" type="submit" class="btn btn-success btn-block submit-form">
+                                <i class="fal fa-pen"></i>
+                                CREATE AR INVOICE REQUEST
+                            </button> </div>
+                        </div>
+                    </div>
+                    <div class="card prequestshow">
+                            <div class="card-body">
+                                <h2 class="card-title fsize-big" style="color:orange;">Supplier Payment Request</h2>
+                                <h6 class="text-uppercase text-black-50 mb-1" class="fsize-medium">Payment Request Details</h6 class="text-uppercase text-black-50 mb-1">
+                                <div class="row">
+                                    <div class="col form-group">
+                                        <label>Supplier PO Number</label>
+                                        <select id="inputState" class="form-control form-control-sm" required>
+                                            <option>#402001609 Ambica Steels Limited</option>
+                                            <option>...</option>
+                                        </select>
+                                    </div>
+                                    <div class="col form-group">
+                                        <label>PO Request Number</label>
+                                        <select id="inputState" class="form-control form-control-sm" required>
+                                            <option>PO Request #5986</option>
+                                            <option>...</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="row">
+                                    <div class="col form-group">
+                                        <label>Customer Account</label>
+                                        <select id="inputState" class="form-control form-control-sm" required>
+                                                <option>P&G</option>
+                                                <option>...</option>
+                                        </select>
+                                    </div>
+                                    <div class="col form-group">
+                                        <label>Customer Name</label>
+                                        <select id="inputState" class="form-control form-control-sm" required>
+                                                <option>Procter & Gamble Home Products Pvt. Ltd.</option>
+                                                <option>...</option>
+                                        </select>
+                                    </div>
+                                    <div class="col form-group">
+                                            <label>Name Of The Requestor / IS & P</label>
+                                            <select id="inputState" class="form-control form-control-sm" required>
+                                                    <option>Vallabh A.</option>
+                                                    <option>...</option>
+                                            </select>
+                                        </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col form-group">
+                                        <label>Supplier PO Date</label>
+                                        <input class="form-control form-control-sm datepicker">
+                                    </div>
+                                    <div class="col form-group">
+                                        <label>Status</label>
+                                        <select id="inputState" class="form-control form-control-sm" required>
+                                                <option value=""></option>
+                                                <optgroup label="Pending"><option value="Payment Pending">Payment Pending</option>
+                                                <option value="Partial Payment Pending">Partial Payment Pending</option></optgroup><optgroup label="Rejected"><option value="Supplier Info: Bank Details Missing">Supplier Info: Bank Details Missing</option>
+                                                <option value="Supplier Info: Bank Details Incorrect">Supplier Info: Bank Details Incorrect</option>
+                                                <option value="Supplier Info: PI mismatch">Supplier Info: PI mismatch</option>
+                                                <option value="Rejected: Others">Rejected: Others</option></optgroup><optgroup label="Payment on Hold"><option value="Order Info: Low Margin">Order Info: Low Margin</option>
+                                                <option selected="selected" value="Payment on Hold: Others">Payment on Hold: Others</option></optgroup><optgroup label="Completed"><option value="Payment Made">Payment Made</option>
+                                                <option value="Partial Payment Made">Partial Payment Made</option></optgroup><optgroup label="Refund"><option value="Excess Payment Made">Excess Payment Made</option>
+                                                <option value="Supplier cannot fulfill PO">Supplier cannot fulfill PO</option>
+                                                <option value="Material Rejected">Material Rejected</option></optgroup><optgroup label="Cancelled"><option value="Cancelled">Cancelled</option></optgroup>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col form-group">
+                                        <label>Payment Due Date</label>
+                                        <input class="form-control form-control-sm datepicker">
+                                    </div>
+                                    <div class="col form-group">
+                                        <label>Purpose of Payment</label>
+                                        <select id="inputState" class="form-control form-control-sm" required>
+                                                <option value=""></option>
+                                                <option value="Advance - On issue of PO">Advance - On issue of PO</option>
+                                                <option selected="selected" value="Advance - Material Ready for dispatch">Advance - Material Ready for dispatch</option>
+                                                <option value="Credit">Credit</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                        <div class="col">
+                                            <div class="form-group mb-0">
+                                            <label>Remaining amount to be Paid</label>
+                                            </div>
+                                            <h6 class="form-group text-uppercase text-black-50 form-text mb-1">₹10,266.00</h6>
+                                        </div>
+                                        <div class="col mt-1">
+                                        <div class="form-group mb-0">
+                                        <label>Total amount paid in Percentage</label>
+                                        </div>
+                                        <h6 class="form-group text-uppercase text-black-50 form-text mb-1">0.00%</h6>
+                                        </div>
+                                </div>
+                                <div class="addprequest">
+                                    <div class="appendforpreq">
+                                    </div>    
+                                    <div class="form-row">
+                                        <div class="col">
+                                        <a href="javascript:void(0)" class="btn btn-success btn-outline-success btn-block mb-2 mb-md-0 btnpreq"><i class="fal fa-file-excel mr-1"></i>Add
+                                        Payment Request</a>
+                                        </div>
+                                        <div class="col">
+                                        <a href="javascript:void(0)" class="btn btn-outline-success btn-block mb-2 mb-md-0"><i class="fal fa-clipboard-list mr-1"></i>Save Payment Transaction</a>
+                                        </div>
+                                    </div>
+                                
+                                </div><br>
+                                <div class="row">
+                                    <div class="col form-group">
+                                        <label>Attachments</label>
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input" id="customFile">
+                                            <label class="custom-file-label form-control form-control-sm-sm" for="customFile">Choose file</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row"><div class="col"><button name="save_and_preview" type="submit" class="btn btn-success btn-block"><i class="far fa-check mr-1"></i> Create Payment Request
+                                </button></div></div>
+                            </div>
+                        </div>
+                        
+                    <!--<button type="submit" class="btn my-primary subshhd">Submit</button>-->
+                </form>
+            </div>
+            </div>
+    </body>
+    <script>
+            $("#vertical-menu h3").click(function () {
+            //slide up all the link lists
+            $("#vertical-menu ul ul").slideUp();
+            $('.plus',this).html('+');
+            //slide down the link list below the h3 clicked - only if its closed
+            if (!$(this).next().is(":visible")) {
+                $(this).next().slideDown();
+                //$(this).remove("span").append('<span class="minus">-</span>');
+                $('.plus').html('+');
+                $('.plus',this).html('-');
+            }
+        })
+    </script>
+    <script>
+        $(".inq").click(function(){
+            $("#vertical-menu ul ul").slideUp();
+            $('.plus').html('+');
+            $(".hidesupp").hide();
+            $(".sqshow").hide();
+            $(".soshow").hide();
+            $(".poshow").hide();
+            $(".arinvshow").hide();
+            $('.navshow').show();
+            $('.appnlist').remove();
+            $('.navshow').append('<ol class="breadcrumb appnlist" style="background-color: white"><li class="breadcrumb-item"><a href="#" style="color:orange;">Home</a></li><li class="breadcrumb-item active" aria-current="page">New Inquiry</li></ol>');
+            $(".hidemand").show();
+            $(".showininq").show();
+            $(".grposhow").hide();
+            $(".apshow").hide();
+            $(".prequestshow").hide();
+            $(".showothers").hide();
+            $(".inqshow").show();
+            $(".subshhd").show();
+            $(".showonpo").hide();
+            $('.appendhere').empty();
+            $('.appendforothers').empty();
+        })
+    </script>
+    <script>
+        $(".salesq").click(function(){
+            $("#vertical-menu ul ul").slideUp();
+            $('.plus').html('+');
+            $(".inqshow").hide();
+            $(".soshow").hide();
+            $(".poshow").hide();
+            $(".arinvshow").hide();
+            $('.navshow').show();
+            $('.appnlist').remove();
+            $('.navshow').append('<ol class="breadcrumb appnlist" style="background-color: white"><li class="breadcrumb-item"><a href="#" style="color:orange;">Home</a></li><li class="breadcrumb-item active" aria-current="page">New Sales Quote</li></ol>');
+            $(".hidemand").show();
+            $(".showininq").hide();
+            $(".grposhow").hide();
+            $(".apshow").hide();
+            $(".prequestshow").hide();
+            $(".showothers").show();
+            $(".sqshow").show();
+            $(".subshhd").show();
+            $(".showonpo").hide();
+            $('.appendhere').empty();
+            $('.appendforothers').empty();
+        })
+    </script>
+    <script>
+        $(".saleso").click(function(){
+            $("#vertical-menu ul ul").slideUp();
+            $('.plus').html('+');
+            $(".inqshow").hide();
+            $(".sqshow").hide();
+            $(".poshow").hide();
+            $(".arinvshow").hide();
+            $('.navshow').show();
+            $('.appnlist').remove();
+            $('.navshow').append('<ol class="breadcrumb appnlist" style="background-color: white"><li class="breadcrumb-item"><a href="#" style="color:orange;">Home</a></li><li class="breadcrumb-item active" aria-current="page">New Sales Order</li></ol>');
+            $(".hidemand").show();
+            $(".grposhow").hide();
+            $(".apshow").hide();
+            $(".prequestshow").hide();
+            $(".showininq").hide();
+            $(".showothers").show();
+            $(".soshow").show();
+            $(".subshhd").show();
+            $(".showonpo").hide();
+            $('.appendhere').empty();
+            $('.appendforothers').empty();
+        })
+    </script>
+    <script>
+        $(".suppo").click(function(){
+            $("#vertical-menu ul ul").slideUp();
+            $('.plus').html('+');
+            $(".inqshow").hide();
+            $(".soshow").hide();
+            $(".sqshow").hide();
+            $(".arinvshow").hide();
+            $('.navshow').show();
+            $('.appnlist').remove();
+            $('.navshow').append('<ol class="breadcrumb appnlist" style="background-color: white"><li class="breadcrumb-item"><a href="#" style="color:orange;">Home</a></li><li class="breadcrumb-item active" aria-current="page">New Supplier PO</li></ol>');
+            $(".hidemand").show();
+            $(".grposhow").hide();
+            $(".apshow").hide();
+            $(".prequestshow").hide();
+            $(".showininq").hide();
+            $(".showothers").show();
+            $(".poshow").show();
+            $(".subshhd").show();
+            $(".showonpo").show();
+            $('.appendhere').empty();
+            $('.appendforothers').empty();
+        })
+    </script>
+    <script>
+        $(".arinv").click(function(){
+            $("#vertical-menu ul ul").slideUp();
+            $('.plus').html('+');
+            $(".inqshow").hide();
+            $(".soshow").hide();
+            $(".poshow").hide();
+            $(".sqshow").hide();
+            $('.navshow').show();
+            $('.appnlist').remove();
+            $('.navshow').append('<ol class="breadcrumb appnlist" style="background-color: white"><li class="breadcrumb-item"><a href="#" style="color:orange;">Home</a></li><li class="breadcrumb-item active" aria-current="page">New AR Invoice</li></ol>');
+            $(".hidemand").show();
+            $(".showininq").hide();
+            $(".arcancel").hide();
+            $('.arreject').hide();
+            $(".grposhow").hide();
+            $(".apshow").hide();
+            $(".prequestshow").hide();
+            $(".showothers").show();
+            $(".arinvshow").show();
+            $(".subshhd").show();
+            $(".showonpo").hide();
+            $('.appendhere').empty();
+            $('.appendforothers').empty();
+        })
+    </script>
+    <script>
+        $(".grpo").click(function(){
+            $("#vertical-menu ul ul").slideUp();
+            $('.plus').html('+');
+            $(".inqshow").hide();
+            $(".soshow").hide();
+            $(".poshow").hide();
+            $(".sqshow").hide();
+            $('.navshow').show();
+            $('.appnlist').remove();
+            $('.navshow').append('<ol class="breadcrumb appnlist" style="background-color: white"><li class="breadcrumb-item"><a href="#" style="color:orange;">Home</a></li><li class="breadcrumb-item active" aria-current="page">New GRPO Request</li></ol>');
+            $(".hidemand").show();
+            $(".showininq").hide();
+            $(".arcancel").hide();
+            $('.arreject').hide();
+            $(".showothers").show();
+            $(".arinvshow").hide();
+            $(".grposhow").show();
+            $(".apshow").hide();
+            $(".prequestshow").hide();
+            $(".subshhd").show();
+            $(".showonpo").hide();
+            $('.appendhere').empty();
+            $('.appendforothers').empty();
+        })
+    </script>
+        <script>
+        $(".ap").click(function(){
+            $("#vertical-menu ul ul").slideUp();
+            $('.plus').html('+');
+            $(".inqshow").hide();
+            $(".soshow").hide();
+            $(".poshow").hide();
+            $(".sqshow").hide();
+            $('.navshow').show();
+            $('.appnlist').remove();
+            $('.navshow').append('<ol class="breadcrumb appnlist" style="background-color: white"><li class="breadcrumb-item"><a href="#" style="color:orange;">Home</a></li><li class="breadcrumb-item active" aria-current="page">New AP Request</li></ol>');
+            $(".hidemand").show();
+            $(".showininq").hide();
+            $(".arcancel").hide();
+            $('.arreject').hide();
+            $(".showothers").show();
+            $(".arinvshow").hide();
+            $(".grposhow").hide();
+            $(".prequestshow").hide();
+            $(".apshow").show();
+            $(".subshhd").show();
+            $(".showonpo").hide();
+            $('.appendhere').empty();
+            $('.appendforothers').empty();
+        })
+    </script>
+        <script>
+        $(".supppreq").click(function(){
+            $("#vertical-menu ul ul").slideUp();
+            $('.plus').html('+');
+            $(".inqshow").hide();
+            $(".soshow").hide();
+            $(".poshow").hide();
+            $(".sqshow").hide();
+            $('.navshow').show();
+            $('.appnlist').remove();
+            $('.navshow').append('<ol class="breadcrumb appnlist" style="background-color: white"><li class="breadcrumb-item"><a href="#" style="color:orange;">Home</a></li><li class="breadcrumb-item active" aria-current="page">New AP Request</li></ol>');
+            $(".hidemand").show();
+            $(".showininq").hide();
+            $(".arcancel").hide();
+            $('.arreject').hide();
+            $(".showothers").show();
+            $(".arinvshow").hide();
+            $(".grposhow").hide();
+            $(".apshow").hide();
+            $(".prequestshow").show();
+            $(".appendforpreq").empty();
+            $(".subshhd").show();
+            $(".showonpo").hide();
+            $('.appendhere').empty();
+            $('.appendforothers').empty();
+        })
+    </script>
+    <script>
+        $('.selectforinp').on('change', function() {
+            if('Cancelled AR Invoice'==$(this).find(":selected").val()){
+                $('.arreject').hide();
+                $(".arcancel").show();
+            }
+            else if('AR Invoice Request Rejected'==$(this).find(":selected").val()){
+                $(".arcancel").hide();
+                $('.arreject').show();
+            }
+            else{
+                $(".arcancel").hide();
+                $('.arreject').hide();
+            }
+        });
+    </script>
+    <!--<script>
+            $('#datepicker').datepicker({
+                uiLibrary: 'bootstrap4'
+            });
+            $('#datepicker1').datepicker({
+                uiLibrary: 'bootstrap4'
+            });
+            $('#datepicker2').datepicker({
+                uiLibrary: 'bootstrap4'
+            });
+            $('#datepicker3').datepicker({
+                uiLibrary: 'bootstrap4'
+            });
+            $('#datepicker4').datepicker({
+                uiLibrary: 'bootstrap4'
+            });
+            $('#datepicker5').datepicker({
+                uiLibrary: 'bootstrap4'
+            });
+            $('#datepicker6').datepicker({
+                uiLibrary: 'bootstrap4'
+            });
+            $('#datepicker7').datepicker({
+                uiLibrary: 'bootstrap4'
+            });
+            $('#datepicker8').datepicker({
+                uiLibrary: 'bootstrap4'
+            });
+            $('#datepicker9').datepicker({
+                uiLibrary: 'bootstrap4'
+            });
+            $('#datepicker10').datepicker({
+                uiLibrary: 'bootstrap4'
+            });
+            $('#datepicker11').datepicker({
+                uiLibrary: 'bootstrap4'
+            });
+            $('#datepicker12').datepicker({
+                uiLibrary: 'bootstrap4'
+            });
+            $('#datepicker13').datepicker({
+                uiLibrary: 'bootstrap4'
+            });
+            
+        </script>-->
+        
+        <script>
+            $('body').on('focus',".datepicker", function(){
+                $(this).datepicker({
+                uiLibrary: 'bootstrap4'
+                });
+            });
+        </script>
+        <script>
+        $('.addproinq').click(function()
+        {
+            //alert('adhuwer');
+            $('.appendhere').append('<div class="row"><div class="col form-group"><label>#</label><input type="text" class="form-control form-control-sm form-control form-control-sm-sm" id="exampleInputPassword1" required></div><div class="col form-group"><label>Product</label><select id="inputState" class="form-control form-control-sm form-control form-control-sm-sm" required><option selected>BM9M9P0 - FAG Deep Groove Ball Bearing, Inside Dia 30 mm, Outside Dia 72 mm, Width 19 mm - 6306-ZZ</option><option>...</option></select></div><div class="col form-group"><label>Customer Material</label><input type="text" class="form-control form-control-sm form-control form-control-sm-sm" id="exampleInputPassword1" required></div><div class="col form-group"><label>Customer Material Code</label><input type="text" class="form-control form-control-sm form-control form-control-sm-sm" id="exampleInputPassword1" required></div><!--<div class="col form-group"><label>SAP Status</label><span class="badge badge-success text-uppercase">SYNCED</span></div>--><div class="col form-group"><label>Quantity</label><input type="text" class="form-control form-control-sm form-control form-control-sm-sm" id="exampleInputPassword1" placeholder="10" required></div><!--<div class="col form-group"><label>Inventory</label><span class="form-control form-control-sm">NO</span></div>--></div>')
+        }
+        )
+        </script>
+        <script>
+        $('.addproothers').click(function(){
+            $('.appendforothers').append('<div class="card"> <div class="card-body"> <div class="row"> <!--<div class="col form-group"> <label>#</label> <input type="text" class="form-control form-control-sm form-control form-control-sm-sm" id="exampleInputPassword1" required> </div>--> <div class="col form-group"> <label>Product</label> <select id="inputState" class="form-control form-control-sm form-control form-control-sm-sm" required=""> <option selected="">BM9M9P0 - FAG Deep Groove Ball Bearing, Inside Dia 30 mm, Outside Dia 72 mm, Width 19 mm - 6306-ZZ</option> <option>...</option> </select> </div> <div class="col form-group"> <label>Customer Material</label> <input type="text" class="form-control form-control-sm form-control form-control-sm-sm" id="exampleInputPassword1" required=""> </div> <div class="col form-group"> <label>Customer Material Code</label> <input type="text" class="form-control form-control-sm form-control form-control-sm-sm" id="exampleInputPassword1" required=""> </div> <!--<div class="col form-group"> <label>SAP Status</label> <span class="form-control form-control-sm">YES</span> </div>--> <div class="col form-group"> <label>Quantity</label> <input type="text" class="form-control form-control-sm form-control form-control-sm-sm" id="exampleInputPassword1" placeholder="10" required=""> </div> <!--<div class="col form-group"> <label>Inventory</label> <span class="form-control form-control-sm">NO</span> </div>--> </div> <div class="row"> <div class="col form-group"> <label>Unit Price*</label> <input type="text" class="form-control form-control-sm" id="exampleInputPassword1" placeholder="50" required=""> </div> <div class="col form-group"> <label>Tax Rate*</label> <select id="inputState" class="form-control form-control-sm" required=""> <option selected="">12% GST</option> <option>...</option> </select> </div> <div class="col form-group"> <label>Tax Code*</label> <select id="inputState" class="form-control form-control-sm" required=""> <option selected="">#92379</option> <option>...</option> </select> </div> <div class="col form-group"> <label>Measurement Unit*</label> <select id="inputState" class="form-control form-control-sm" required=""> <option selected="">EA</option> <option>...</option> </select> </div> <div class="col form-group"> <label>Supplier*</label> <select id="inputState" class="form-control form-control-sm" required=""> <option selected="">NEWI</option> <option>...</option> </select> </div> <div class="col form-group showonpo"> <label>Lead Date</label><input class="form-control form-control-sm datepicker"></div> </div> </div> </div></div>')
+        })
+        </script>
+
+        <script>
+        $(".btnpreq").click(function(){
+            $(".appendforpreq").append('<div class="row"> <div class="col form-group"> <label>Payment Type</label> <select id="inputState" class="form-control form-control-sm" required> <option>Cheque</option> <option>NEFT/RTGS</option> </select> </div> <div class="col form-group"> <label>Cheque Number</label> <input type="text" class="form-control form-control-sm" id="exampleInputPassword1" required> </div> <div class="col form-group"> <label>Issue Date</label> <input class="form-control form-control-sm datepicker"> </div> <div class="col form-group"> <label>Cheque Date</label> <input class="form-control form-control-sm datepicker"> </div> <div class="col form-group"> <label>Status</label> <select id="inputState" class="form-control form-control-sm" required> <option>Cancelled</option> <option>Complete</option> <option>On Hold</option> <option>Pending</option> <option>Rejected</option> <option>Refund</option> </select> </div> <div class="col form-group"> <label>Cheque Date</label> <input class="form-control form-control-sm datepicker"> </div> <div class="col form-group"> <label>Amount</label> <input type="text" class="form-control form-control-sm" id="exampleInputPassword1" required> </div> </div> </div><br>');
+            
+        });
+        </script>
+</html>
