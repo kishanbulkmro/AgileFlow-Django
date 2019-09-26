@@ -10,6 +10,10 @@ from django.db import transaction
 
 # Create your controller here.
 
-@transaction.atomic
 def index(request):
-    return render_to_response('inquiry.html')
+    return render_to_response('index.html')
+
+
+
+
+
